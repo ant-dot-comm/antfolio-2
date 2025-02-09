@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/antfolio-2/static/css/main.65b7ee86.css",
-    "main.js": "/antfolio-2/static/js/main.e1bd9c5f.js",
+    "main.css": "/antfolio-2/static/css/main.7a941197.css",
+    "main.js": "/antfolio-2/static/js/main.e5eda1c2.js",
     "static/js/488.21a3b654.chunk.js": "/antfolio-2/static/js/488.21a3b654.chunk.js",
     "static/media/TwilightinGotham2.svg": "/antfolio-2/static/media/TwilightinGotham2.20845349f5280772b3e16e477343a3f4.svg",
     "static/media/BatLogos.svg": "/antfolio-2/static/media/BatLogos.544037a2e6e8cdc27ed4a8a7b341f30e.svg",
@@ -32,12 +32,12 @@
     "static/media/tailwind.svg": "/antfolio-2/static/media/tailwind.ea2ad4b65f644e55be4a79b6f7bc887d.svg",
     "static/media/vue.svg": "/antfolio-2/static/media/vue.c53c8c714d5ea21e646027c27eedc8e1.svg",
     "static/media/adobe.svg": "/antfolio-2/static/media/adobe.81b20624d4cf25c8432c80c1794991c6.svg",
-    "main.65b7ee86.css.map": "/antfolio-2/static/css/main.65b7ee86.css.map",
-    "main.e1bd9c5f.js.map": "/antfolio-2/static/js/main.e1bd9c5f.js.map",
+    "main.7a941197.css.map": "/antfolio-2/static/css/main.7a941197.css.map",
+    "main.e5eda1c2.js.map": "/antfolio-2/static/js/main.e5eda1c2.js.map",
     "488.21a3b654.chunk.js.map": "/antfolio-2/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.65b7ee86.css",
-    "static/js/main.e1bd9c5f.js"
+    "static/css/main.7a941197.css",
+    "static/js/main.e5eda1c2.js"
   ]
 }
