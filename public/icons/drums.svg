@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
+  <circle cx="17.06" cy="20.59" r="7.86" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+  <circle cx="18.72" cy="21.48" r="2.04" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+  <line x1="22.11" y1="29.21" x2="20.92" y2="27.43" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+  <line x1="11.97" y1="29.21" x2="13.16" y2="27.43" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+  <g>
+    <path d="M21.19,14.12l-.22-1.32c-.07-.42,.22-.82,.64-.89l6.92-1.13c.42-.07,.82,.22,.89,.64l.33,2c.07,.42-.22,.82-.64,.89l-6.39,1.05" style="fill: none; stroke: #111; stroke-linejoin: round;"/>
+    <ellipse cx="27.53" cy="6.15" rx="6.07" ry="1.21" transform="translate(-.59 8.35) rotate(-17.07)" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="27.53" y1="10.81" x2="27.53" y2="7.42" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="27.53" y1="29.98" x2="27.53" y2="14.7" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="23.18" y1="28.44" x2="27.53" y2="25.1" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="32.13" y1="28.44" x2="27.78" y2="25.1" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+  </g>
+  <g>
+    <path d="M12.81,14.12l.22-1.32c.07-.42-.22-.82-.64-.89l-6.92-1.13c-.42-.07-.82,.22-.89,.64l-.33,2c-.07,.42,.22,.82,.64,.89l6.39,1.05" style="fill: none; stroke: #111; stroke-linejoin: round;"/>
+    <ellipse cx="6.47" cy="6.15" rx="1.21" ry="6.07" transform="translate(-1.31 10.53) rotate(-72.93)" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="6.47" y1="10.81" x2="6.47" y2="7.42" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="6.47" y1="29.98" x2="6.47" y2="14.7" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="10.82" y1="28.44" x2="6.47" y2="25.1" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="1.87" y1="28.44" x2="6.22" y2="25.1" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+  </g>
+</svg>

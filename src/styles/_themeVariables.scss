@@ -1,0 +1,101 @@
+@import '_variables';
+
+$--theme-primary: --theme-primary;
+$--theme-primary-light: --theme-primary-light;
+$--theme-primary-dark: --theme-primary-dark;
+$--theme-secondary: --theme-secondary;
+$--theme-secondary-light: --theme-secondary-light;
+$--theme-secondary-dark: --theme-secondary-dark;
+$--theme-highlight-primary: --theme-highlight-primary;
+$--theme-highlight-primary-light: --theme-highlight-primary-light;
+$--theme-highlight-primary-dark: --theme-highlight-primary-dark;
+$--theme-highlight-secondary: --theme-highlight-secondary;
+$--theme-highlight-secondary-light: --theme-highlight-secondary-light;
+$--theme-highlight-secondary-dark: --theme-highlight-secondary-dark;
+$--theme-font-color-base: --theme-font-color-base;
+$--theme-font-color-secondary: --theme-font-color-secondary;
+$--theme-font-color-tertiary: --theme-font-color-tertiary;
+
+
+$theme-map-developer: (
+    $--theme-primary: $color-developer-primary-medium,
+    $--theme-primary-light: $color-developer-primary-light,
+    $--theme-primary-dark: $color-developer-primary-dark,
+
+    $--theme-secondary: $color-developer-secondary-medium,
+    $--theme-secondary-light: $color-developer-secondary-light,
+    $--theme-secondary-dark: $color-developer-secondary-dark,
+
+    $--theme-highlight-primary: $color-developer-highlight-1-medium,
+    $--theme-highlight-primary-light: $color-developer-highlight-1-light,
+    $--theme-highlight-primary-dark: $color-developer-highlight-1-dark,
+
+    $--theme-highlight-secondary: $color-developer-highlight-2-medium,
+    $--theme-highlight-secondary-light: $color-developer-highlight-2-light,
+    $--theme-highlight-secondary-dark: $color-developer-highlight-2-dark,
+
+    $--theme-font-color-base: $color-developer-font-base,
+    $--theme-font-color-secondary: $color-developer-font-secondary,
+    $--theme-font-color-tertiary: $color-developer-font-tertiary,
+);
+
+
+$theme-map-batman: (
+    $--theme-primary: $color-batman-primary-medium,
+    $--theme-primary-light: $color-batman-primary-light,
+    $--theme-primary-dark: $color-batman-primary-dark,
+
+    $--theme-secondary: $color-batman-secondary-medium,
+    $--theme-secondary-light: $color-batman-secondary-light,
+    $--theme-secondary-dark: $color-batman-secondary-dark,
+
+    $--theme-highlight-primary: $color-batman-highlight-1-medium,
+    $--theme-highlight-primary-light: $color-batman-highlight-1-light,
+    $--theme-highlight-primary-dark: $color-batman-highlight-1-dark,
+
+    $--theme-highlight-secondary: $color-batman-highlight-2-medium,
+    $--theme-highlight-secondary-light: $color-batman-highlight-2-light,
+    $--theme-highlight-secondary-dark: $color-batman-highlight-2-dark,
+
+    $--theme-font-color-base: $color-batman-font-base,
+    $--theme-font-color-secondary: $color-batman-font-secondary,
+    $--theme-font-color-tertiary: $color-batman-font-tertiary,
+);
+
+$theme-map-sports: (
+    $--theme-primary: $color-sports-primary-medium,
+    $--theme-primary-light: $color-sports-primary-light,
+    $--theme-primary-dark: $color-sports-primary-dark,
+
+    $--theme-secondary: $color-sports-secondary-medium,
+    $--theme-secondary-light: $color-sports-secondary-light,
+    $--theme-secondary-dark: $color-sports-secondary-dark,
+
+    $--theme-highlight-primary: $color-sports-highlight-1-medium,
+    $--theme-highlight-primary-light: $color-sports-highlight-1-light,
+    $--theme-highlight-primary-dark: $color-sports-highlight-1-dark,
+
+    $--theme-highlight-secondary: $color-sports-highlight-2-medium,
+    $--theme-highlight-secondary-light: $color-sports-highlight-2-light,
+    $--theme-highlight-secondary-dark: $color-sports-highlight-2-dark,
+
+    $--theme-font-color-base: $color-sports-font-base,
+    $--theme-font-color-secondary: $color-sports-font-secondary,
+    $--theme-font-color-tertiary: $color-sports-font-tertiary,
+);
+
+@mixin spread-map($map: ()) {
+    @each $key, $value in $map {
+        #{$key}: $value;
+    }
+}
+
+.batman {
+    @include spread-map($theme-map-batman);
+}
+.developer {
+    @include spread-map($theme-map-developer);
+}
+.sports {
+    @include spread-map($theme-map-sports);
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
+  <path d="M12.25,19.54h4.91c1.5,0,7.11-3.74,7.11-3.74" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: bevel;"/>
+  <path d="M28.07,21.67h4.93v-1.87c0-.98-4.73-4.01-6.6-4.01h-9.66v-4.27c-2.36,0-5.86,3.09-8.74,3.47l.11-1c0-1.21-.98-2.18-2.18-2.18H1.01c0,1.31-.24,2.11,1.63,3.18v4.54s-.08,0,1.31,0" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+  <line x1="12.79" y1="21.67" x2="23.36" y2="21.67" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: bevel;"/>
+  <polyline points="16.62 11.53 18.42 11.53 18.42 15.63" style="fill: none; stroke: #111; stroke-linejoin: round;"/>
+  <line x1="2.64" y1="17.66" x2="4.35" y2="17.66" style="fill: none; stroke: #111; stroke-miterlimit: 10;"/>
+  <path d="M8.11,15.77c1.85,0,3.36,1.51,3.36,3.36s-1.51,3.36-3.36,3.36-3.36-1.51-3.36-3.36,1.51-3.36,3.36-3.36m0-1c-2.41,0-4.36,1.95-4.36,4.36s1.95,4.36,4.36,4.36,4.36-1.95,4.36-4.36-1.95-4.36-4.36-4.36h0Z" style="fill: #111;"/>
+  <path d="M8.11,18.67c.26,0,.47,.21,.47,.47s-.21,.47-.47,.47-.47-.21-.47-.47,.21-.47,.47-.47m0-1c-.81,0-1.47,.66-1.47,1.47s.66,1.47,1.47,1.47,1.47-.66,1.47-1.47-.66-1.47-1.47-1.47h0Z" style="fill: #111;"/>
+  <circle cx="25.74" cy="19.14" r="3.34" style="fill: none; stroke: #111; stroke-miterlimit: 10;"/>
+  <path d="M25.74,18.67c.26,0,.47,.21,.47,.47s-.21,.47-.47,.47-.47-.21-.47-.47,.21-.47,.47-.47m0-1c-.81,0-1.47,.66-1.47,1.47s.66,1.47,1.47,1.47,1.47-.66,1.47-1.47-.66-1.47-1.47-1.47h0Z" style="fill: #111;"/>
+</svg>
