@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/antfolio-2/static/css/main.65b7ee86.css",
+    "main.js": "/antfolio-2/static/js/main.e1bd9c5f.js",
+    "static/js/488.21a3b654.chunk.js": "/antfolio-2/static/js/488.21a3b654.chunk.js",
+    "static/media/TwilightinGotham2.svg": "/antfolio-2/static/media/TwilightinGotham2.20845349f5280772b3e16e477343a3f4.svg",
+    "static/media/BatLogos.svg": "/antfolio-2/static/media/BatLogos.544037a2e6e8cdc27ed4a8a7b341f30e.svg",
+    "service-worker.js": "/antfolio-2/service-worker.js",
+    "static/media/iconSprite.svg": "/antfolio-2/static/media/iconSprite.cd999a2b6a1156e54c7abfae4c1aeeed.svg",
+    "static/media/desktopAnimated.svg": "/antfolio-2/static/media/desktopAnimated.1f26c9d9bacfd576a2a68520b8a23bf5.svg",
+    "static/media/field-marks.svg": "/antfolio-2/static/media/field-marks.986a11030ae7dd48f71e2d37d925fdd3.svg",
+    "static/media/sass.svg": "/antfolio-2/static/media/sass.c3a8257ab978e66f16f4a7b107b4001f.svg",
+    "static/media/jest.svg": "/antfolio-2/static/media/jest.9e47780d2d69285db1d9a9fa33fce61e.svg",
+    "static/media/d3js.svg": "/antfolio-2/static/media/d3js.f880e1bff7925df69b0e0c1511f63831.svg",
+    "static/media/react.svg": "/antfolio-2/static/media/react.5127d86c20e4e3937876373a2880d322.svg",
+    "static/media/threejs.svg": "/antfolio-2/static/media/threejs.22310522f50128f809e3dd26ebaff525.svg",
+    "static/media/github.svg": "/antfolio-2/static/media/github.99b4dd6f7cd7df9bec1bbfe51a2a24ea.svg",
+    "static/media/blender.svg": "/antfolio-2/static/media/blender.c1ad3ef8ecd56d3aaae7a20ee082f997.svg",
+    "static/media/typescript.svg": "/antfolio-2/static/media/typescript.6d1c485751a4b44364013d2e540341b4.svg",
+    "static/media/cypress.svg": "/antfolio-2/static/media/cypress.e8cbea3965adcc4162b56a4730ce9505.svg",
+    "static/media/storybook.svg": "/antfolio-2/static/media/storybook.c092988607e1c67d07569ddd995876b8.svg",
+    "static/media/atlassian.svg": "/antfolio-2/static/media/atlassian.92f2f18f04a64ebbf4ba3aaabd22daed.svg",
+    "static/media/nextjs.svg": "/antfolio-2/static/media/nextjs.f8808dd2d75564e6881f55f462061d16.svg",
+    "static/media/git.svg": "/antfolio-2/static/media/git.1707b179b32c99bc6d5ede7cd48157a9.svg",
+    "static/media/js.svg": "/antfolio-2/static/media/js.0904266f7746c015b4a154ff9f1b6011.svg",
+    "static/media/semanticui.svg": "/antfolio-2/static/media/semanticui.f2398f55223b2676a5a292490b696288.svg",
+    "static/media/strapi.svg": "/antfolio-2/static/media/strapi.e21b0698659e3db3f20fb148dd4fd215.svg",
+    "index.html": "/antfolio-2/index.html",
+    "static/media/figma.svg": "/antfolio-2/static/media/figma.f6974a4bbf38a891de0e7a17c8ad22f1.svg",
+    "static/media/html5.svg": "/antfolio-2/static/media/html5.0d83e1831659dc17c6f27880d585072e.svg",
+    "static/media/zeroheight.svg": "/antfolio-2/static/media/zeroheight.b2c2e908f7229e3b98ee25338d4ac522.svg",
+    "static/media/tailwind.svg": "/antfolio-2/static/media/tailwind.ea2ad4b65f644e55be4a79b6f7bc887d.svg",
+    "static/media/vue.svg": "/antfolio-2/static/media/vue.c53c8c714d5ea21e646027c27eedc8e1.svg",
+    "static/media/adobe.svg": "/antfolio-2/static/media/adobe.81b20624d4cf25c8432c80c1794991c6.svg",
+    "main.65b7ee86.css.map": "/antfolio-2/static/css/main.65b7ee86.css.map",
+    "main.e1bd9c5f.js.map": "/antfolio-2/static/js/main.e1bd9c5f.js.map",
+    "488.21a3b654.chunk.js.map": "/antfolio-2/static/js/488.21a3b654.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65b7ee86.css",
+    "static/js/main.e1bd9c5f.js"
+  ]
+}

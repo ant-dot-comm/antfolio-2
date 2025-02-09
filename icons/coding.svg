@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
+  <path d="M31.92,25.59s.08,.04,.08,.08c0,1.39-1.13,2.52-2.52,2.52H4.52c-1.39,0-2.52-1.13-2.52-2.52,0-.04,.04-.08,.08-.08H31.92m0-1H2.08c-.6,0-1.08,.48-1.08,1.08,0,1.94,1.57,3.52,3.52,3.52H29.48c1.94,0,3.52-1.57,3.52-3.52,0-.6-.48-1.08-1.08-1.08h0Z" style="fill: #111;"/>
+  <path d="M20.75,25.54v.45c0,.25-.51,.45-1.14,.45h-5.22c-.63,0-1.14-.2-1.14-.45v-.45" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+  <g>
+    <path d="M30.65,24.59V7.38c0-1.42-1.14-2.57-2.56-2.57h-1" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+    <path d="M3.35,24.59V7.38c0-1.42,1.14-2.57,2.56-2.57h1s16.65,0,16.65,0" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+  </g>
+  <path d="M16.51,6.73h10.82c.68,0,1.22,.55,1.22,1.23v13.49c0,.68-.55,1.23-1.22,1.23H6.67c-.68,0-1.22-.55-1.22-1.23V7.96c0-.68,.55-1.23,1.22-1.23h5.76" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+  <polyline points="14.07 11.74 11.35 15.22 14.07 18.21" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+  <polyline points="19.83 11.74 22.55 15.22 19.83 18.21" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+  <line x1="17.54" y1="11.74" x2="15.65" y2="18.21" style="fill: none; stroke: #111; stroke-linecap: round; stroke-linejoin: round;"/>
+</svg>
