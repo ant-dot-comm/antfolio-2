@@ -71,14 +71,14 @@ const Experience = () => {
             {/* Section Title with Scroll Effect */}
             <motion.h2
                 ref={ref}
-                className="header__firstName leading-none font-light text-gray-300 mb-12"
+                className="header__firstName leading-none font-light text-theme-primary mb-12"
                 style={{
                     fontSize: `clamp(60px, 10vw, 300px)`,
                     x: moveLeftRight,
                 }}
             >
                 Experience
-                <div className="text-xs text-gray-400 font-normal md:ml-[15%]">
+                <div className="text-xs text-gray-600 font-normal md:ml-[15%]">
                     Includes, but not limitied to
                 </div>
             </motion.h2>

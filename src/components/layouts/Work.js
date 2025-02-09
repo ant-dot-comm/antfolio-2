@@ -47,7 +47,7 @@ const projects = [
         id: 5,
         title: "LoremPickSum.com",
         url: "https://www.behance.net/gallery/162760141/Logos",
-        tags: ["design", "development"],
+        tags: ["development"],
         image: `${
             process.env.PUBLIC_URL + "/images/projects/LoremPickSum.png"
         }`,
@@ -91,7 +91,7 @@ const Work = () => {
             {/* Section Title with Scroll Effect */}
             <motion.div
                 ref={ref} 
-                className="header__firstName text-center md:text-right leading-none font-light text-gray-300 mb-12"
+                className="header__firstName text-center md:text-right leading-none font-light text-theme-primary mb-12"
                 style={{
                     fontSize: `clamp(60px, 10vw, 300px)`,
                     x: moveLeftRight,

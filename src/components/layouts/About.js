@@ -82,7 +82,7 @@ const About = () => {
             <div className="md:w-1/3">
                 {/* Section Title with Motion */}
                 <motion.h2
-                    className="header__firstName text-center md:text-right font-light text-gray-300"
+                    className="header__firstName text-center md:text-right font-light text-theme-primary"
                     style={{
                         fontSize: `clamp(60px, 10vw, 300px)`,
                         x: moveLeftRight,

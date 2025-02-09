@@ -34,16 +34,20 @@ const Header = () => {
             <div className="fixed top-0 left-0 w-full z-50 flex justify-between items-center p-4 bg-gradient-to-b from-gray-900/40 to-gray-500/0 backdrop-blur-lg">
                 {/* Social */}
                 <div className="flex gap-4 text-gray-300">
+                    <a href="https://www.linkedin.com/in/antonicommodore/" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon
                         icon={{ prefix: "fab", iconName: "linkedin-in" }}
                         transform="shrink-4"
                         className="bg-theme-primary-light w-[24px] h-[24px] rounded-md"
                     />
+                    </a>
+                    <a href="https://www.behance.net/antonicommodore" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon
                         icon={{ prefix: "fab", iconName: "behance" }}
                         transform="shrink-4"
                         className="bg-theme-primary-light w-[24px] h-[24px] rounded-md"
                     />
+                    </a>
                 </div>
                 {/* Links */}
                 <ThemeSwitcher />
