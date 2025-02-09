@@ -131,7 +131,7 @@ const About = () => {
                             {(avatarThemes[theme] || avatarThemes.default).map((imageName) => (
                                 <Avatar
                                     key={imageName}
-                                    imageUrl={`${process.env.PUBLIC_URL}images/familyIcons/${imageName}.svg`}
+                                    imageUrl={`${process.env.PUBLIC_URL}/images/familyIcons/${imageName}.svg`}
                                     className="w-16 h-16 rounded-lg"
                                 />
                             ))}
@@ -141,8 +141,8 @@ const About = () => {
 
                 {activeTab === "resume" && (
                     <div className="w-full flex flex-col gap-4">
-                        <img src={`${process.env.PUBLIC_URL}images/Antoni-Commodore-resume-1.jpg`} alt="Antoni Commodore" />
-                        <img src={`${process.env.PUBLIC_URL}images/Antoni-Commodore-resume-2.jpg`} alt="Antoni Commodore" />
+                        <img src={`${process.env.PUBLIC_URL}/images/Antoni-Commodore-resume-1.jpg`} alt="Antoni Commodore" />
+                        <img src={`${process.env.PUBLIC_URL}/images/Antoni-Commodore-resume-2.jpg`} alt="Antoni Commodore" />
                     </div>
                 )}
             </motion.div>
