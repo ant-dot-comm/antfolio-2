@@ -140,24 +140,9 @@ const About = () => {
                 )}
 
                 {activeTab === "resume" && (
-                    <div className="">
-                        <h3 className="text-2xl font-bold mb-4">Experience</h3>
-                        <ul className="list-disc list-inside">
-                            <li>
-                                <strong>GoFundMe</strong> - Jedi Master of
-                                Front-End Development
-                            </li>
-                            <li>
-                                <strong>LiveEdit</strong> - Jedi Knight Designer
-                            </li>
-                        </ul>
-
-                        <h3 className="text-2xl font-bold mt-6 mb-4">Skills</h3>
-                        <ul className="list-disc list-inside">
-                            <li>Graphic Design</li>
-                            <li>UI/UX Design</li>
-                            <li>Front-End Development</li>
-                        </ul>
+                    <div className="w-full flex flex-col gap-4">
+                        <img src={`${process.env.PUBLIC_URL}images/Antoni-Commodore-resume-1.jpg`} alt="Antoni Commodore" />
+                        <img src={`${process.env.PUBLIC_URL}images/Antoni-Commodore-resume-2.jpg`} alt="Antoni Commodore" />
                     </div>
                 )}
             </motion.div>
