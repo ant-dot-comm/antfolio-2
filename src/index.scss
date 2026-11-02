@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,4 +13,74 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+// Type scale (see docs/typography.md). Colors here are the light-background defaults;
+// a text color utility (e.g. text-white) on the same element overrides them.
+@layer components {
+  .type-h2 {
+    font-size: clamp(2.5rem, 1.75rem + 3vw, 4rem);
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .type-h3 {
+    font-size: clamp(1.5rem, 1.25rem + 1vw, 2.125rem);
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: theme("colors.gray.800");
+  }
+  .type-h4 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: theme("colors.gray.800");
+  }
+  .type-lead {
+    font-size: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+    line-height: 1.5;
+    font-weight: 500;
+    color: theme("colors.gray.800");
+  }
+  .type-body {
+    font-size: 1rem;
+    line-height: 1.625;
+    font-weight: 400;
+    color: theme("colors.gray.700");
+  }
+  .type-small {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: theme("colors.gray.600");
+  }
+  .type-label {
+    font-size: 0.8125rem;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .type-button {
+    font-size: 1rem;
+    line-height: 1.25;
+    font-weight: 500;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+// Keep anchored sections clear of the fixed top bar
+section[id] {
+  scroll-margin-top: 4rem;
+}
+
+// Two-tone ring so focus shows on light and theme-colored backgrounds
+:focus-visible {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--theme-primary-dark);
 }
