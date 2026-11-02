@@ -1,142 +1,126 @@
-import React, { useState, useRef } from "react";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
-import { useMediaQuery } from "react-responsive";
-import { MediaCard } from "../MediaCard";
+import React from "react";
 
-// Define project data
+import Section from "../Section";
+import ProjectShowcase from "../ProjectShowcase";
+
+const projectImage = (file, alt) => ({ src: `${process.env.PUBLIC_URL}/images/projects/${file}`, alt });
+
+// Each project renders with its showcase layout (see ProjectShowcase.js for the image slots).
+// `tools` are ids from src/data/toolLogos.js.
 const projects = [
     {
-        id: 1,
+        id: "f1nsight",
+        title: "F1nsight",
+        url: "https://www.f1nsight.com/",
+        ctaLabel: "Open F1nsight",
+        secondaryLinks: [{ label: "View on Behance", url: "https://www.behance.net/gallery/209342955/F1NSIGHTCOM" }],
+        description:
+            "Formula 1 data made explorable: leaderboards, lap times, tire strategies, fastest laps for every driver, and an interactive telemetry display.",
+        // TODO: add tools used
+        tools: [],
+        showcase: {
+            layout: "desktop",
+            images: [
+                projectImage("F1nsight-head-to-head.webp", "F1nsight head-to-head comparison of two Mercedes drivers' qualifying, race, wins and points"),
+                projectImage("F1nsight-home.webp", "F1nsight home page with race results, teammate comparisons, race viewer and team history"),
+                projectImage("F1nsight-race-viewer.webp", "F1nsight race viewer with Las Vegas Grand Prix results, a 3D track map and live telemetry"),
+            ],
+        },
+    },
+    {
+        id: "leaguespot",
         title: "LeagueSpot",
         url: "https://www.behance.net/gallery/196153135/LeagueSpot",
-        tags: ["design, development"],
-        image: `${process.env.PUBLIC_URL + "/images/projects/LeagueSpot.jpg"}`,
-        content:
-            "During my tenure at LeagueSpot, I led the creation and implementation of a comprehensive design system, product features, and custom theming capabilities.",
+        ctaLabel: "View on Behance",
+        description:
+            "A design system, product features, and a theming layer for an esports and gaming platform.",
+        // TODO: add tools used
+        tools: [],
+        showcase: {
+            layout: "desktop",
+            images: [
+                projectImage("LeagueSpot-chat.jpg", "LeagueSpot team chat screens with match threads and a message view"),
+                projectImage("LeagueSpot.jpg", "LeagueSpot logo over screens from the platform's interface"),
+                projectImage("LeagueSpot-forms.jpg", "LeagueSpot form components: checkboxes, dropdowns, a server picker and preferences"),
+            ],
+        },
     },
     {
-        id: 2,
-        title: "F1nsight.com",
-        url: "https://www.f1nsight.com/",
-        tags: ["design, development"],
-        image: `${
-            process.env.PUBLIC_URL + "/images/projects/F1nsightMeta.jpg"
-        }`,
-        content:
-            "Welcome to F1NSIGHT! This project is dedicated to providing Formula 1 enthusiasts with detailed analyses of past race data, including leaderboards, lap times, tire strategies, and the fastest laps for each driver",
+        id: "lumtags",
+        title: "LumTags",
+        // TODO [VERIFY]: add link (CTA "See the product").
+        url: null,
+        ctaLabel: "See the product",
+        description:
+            "Purpose-built event photo software that gives every event its own branded gallery. Facial recognition sorts each photo into a private gallery for every attendee, and attendees can polish their shots with AI edits.",
+        // TODO: add tools used
+        tools: [],
+        showcase: {
+            layout: "desktop",
+            images: [
+                projectImage("LumTags-client-gallery.webp", "LumTags client gallery for Cvent @ IMEX 2025 with favorites, search and download"),
+                projectImage("LumTags-admin.webp", "LumTags admin dashboard for an event, with uploaders, collections and photo counts"),
+                projectImage("LumTags-attendee-gallery.webp", "LumTags attendee gallery showing one person's photos from Cvent @ IMEX 2025"),
+            ],
+        },
     },
     {
-        id: 3,
-        title: "The Grails Club",
+        id: "overtake-club",
+        title: "Overtake Club",
+        url: "https://www.behance.net/gallery/230667145/Overtake-Club-F1-Fantasy-Leauge",
+        ctaLabel: "View on Behance",
+        description:
+            "A friendly fantasy F1 league where redemption begins behind the frontrunners. Pick drivers from the back half of the grid (P11–P22) and score points for every position they gain.",
+        // TODO: add tools used
+        tools: [],
+        showcase: {
+            layout: "mobile",
+            images: [
+                projectImage("OvertakeClub-race-picks.png", "Overtake Club race picks list for the 2026 British Grand Prix, choosing two drivers from P11 back"),
+                projectImage("OvertakeClub-season-picks.png", "Overtake Club season picks for SlipstreamDream, with drivers, bonus picks and points for each Grand Prix"),
+                projectImage("OvertakeClub-leaders.webp", "Overtake Club 2026 leaders podium and the league leaderboard"),
+                projectImage("OvertakeClub-race-week.webp", "Overtake Club home screen with this race's picks, Carlos Sainz and Fernando Alonso, above the leaderboard"),
+                projectImage("OvertakeClub-bonus-picks.png", "Overtake Club bonus picks: choose the driver who will lose the most positions and predict DNFs"),
+            ],
+        },
+    },
+    {
+        id: "grails",
+        title: "The Grails Collection",
         url: "http://thegrailsclub.com",
-        tags: ["design, development"],
-        image: `${process.env.PUBLIC_URL + "/images/projects/grails.png"}`,
-        content:
-            "I embarked on a creative project using Blender and Three.js to design and render custom cars inspired by my favorite sneakers.",
-    },
-    {
-        id: 4,
-        title: "Custom Hot Wheels",
-        url: "https://www.instagram.com/batdadmobiles/",
-        tags: ["design"],
-        image: `${process.env.PUBLIC_URL + "/images/projects/customs.png"}`,
-        content:
-            "I love customizing Hot Wheels and collecting unique cars and Batmobiles. Here's a showcase of some of my favorite creations and collectibles.",
-    },
-    {
-        id: 5,
-        title: "LoremPickSum.com",
-        url: "https://www.behance.net/gallery/162760141/Logos",
-        tags: ["development"],
-        image: `${
-            process.env.PUBLIC_URL + "/images/projects/LoremPickSum.png"
-        }`,
-        content:
-            "If you're tired of the same old Lorem Ipsum, look no further! Welcome to LoremPickSum, where you'll find a refreshing alternative to spice up your placeholder text needs.",
+        ctaLabel: "Visit the site",
+        secondaryLinks: [
+            { label: "View on Behance", url: "https://www.behance.net/gallery/162768383/The-Grails-Club" },
+            {
+                label: "Hot Wheels collab",
+                url: "https://www.behance.net/gallery/170076113/TheGrailsClub-x-Hot-Wheels-Collaboration-Concept",
+            },
+        ],
+        description:
+            "Custom cars inspired by my favorite sneakers, designed and rendered with Blender and Three.js.",
+        tools: [],
+        showcase: {
+            layout: "desktop",
+            images: [
+                projectImage("Grails-hot-wheels-collab.webp", "Five Grails Club cars in Hot Wheels collab packaging, each on a display stand against a different colored backdrop"),
+                projectImage("Grails-garage.webp", "The Grails Club garage: a lounge looking into a showroom of sneaker-inspired cars"),
+                projectImage("Grails-six-wheeler.webp", "Render of a gray six-wheel truck with pink and purple accents"),
+            ],
+        },
     },
 ];
 
-// Define tabs
-const tabs = [
-    { id: "all", label: "All" },
-    { id: "design", label: "Design" },
-    { id: "development", label: "Development" },
-];
-
-const Work = () => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.3 });
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end start"],
-    });
-
-    const isMobile = useMediaQuery({ maxWidth: 768 });
-
-    const moveLeftRight = useTransform(
-        scrollYProgress,
-        [0, 1],
-        isMobile ? [0, 0] : [-100, 0]
-    ); 
-
-    const [activeTab, setActiveTab] = useState("all");
-
-    const filteredProjects =
-        activeTab === "all"
-            ? projects
-            : projects.filter((p) => p.tags.includes(activeTab));
-
-    return (
-        <div className="flex flex-col relative py-12 sm:py-20 px-2">
-            {/* Section Title with Scroll Effect */}
-            <motion.div
-                ref={ref} 
-                className="header__firstName text-center md:text-right leading-none font-light text-theme-primary mb-12"
-                style={{
-                    fontSize: `clamp(60px, 10vw, 300px)`,
-                    x: moveLeftRight,
-                }}
-            >
-                Work
-            </motion.div>
-
-            {/* Tab Navigation */}
-            <nav className="tabs flex justify-center gap-6 mb-8">
-                {tabs.map((tab) => (
-                    <button
-                        key={tab.id}
-                        onClick={() => setActiveTab(tab.id)}
-                        className={`p-2 text-sm font-semibold border-b-2 ${
-                            activeTab === tab.id
-                                ? "border-theme-primary text-theme-primary"
-                                : "border-transparent text-gray-400"
-                        } transition-all duration-300`}
-                    >
-                        {tab.label}
-                    </button>
-                ))}
-            </nav>
-
-            {/* Project Cards */}
-            <motion.div
-                className="tab-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                key={activeTab} // Ensures animation resets when changing tabs
-            >
-                {filteredProjects.map((project) => (
-                    <MediaCard
-                        title={project.title}
-                        url={project.url}
-                        image={project.image}
-                    >
-                        {project.content}
-                    </MediaCard>
-                ))}
-            </motion.div>
+const Work = () => (
+    <Section id="work" title="Selected Work" width="wide">
+        {/* Large space between projects, split around a divider */}
+        <div className="divide-y divide-gray-200">
+            {projects.map((project) => (
+                <div key={project.id} className="py-16 md:py-24 lg:py-[7.5rem] first:pt-0 last:pb-0">
+                    <ProjectShowcase project={project} />
+                </div>
+            ))}
         </div>
-    );
-};
+    </Section>
+);
 
 export default Work;

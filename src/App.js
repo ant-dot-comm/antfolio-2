@@ -4,24 +4,32 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 
 import SiteContext from "./SiteContext";
-import DividerShadow from "./components/DividerShadow";
-import Experience from "./components/layouts/Experience";
+import Header from "./components/layouts/Header";
+import Intro from "./components/layouts/Intro";
 import Work from "./components/layouts/Work";
+import Toolkit from "./components/layouts/Toolkit";
+import Route from "./components/layouts/Route";
 import About from "./components/layouts/About";
+import Contact from "./components/layouts/Contact";
 
 import "./styles/App.scss";
-import Header from "./components/layouts/Header";
 
 library.add(fas, fab);
+
+const sections = [Work, Toolkit, Route, About, Contact];
 
 function App() {
     const { theme } = useContext(SiteContext);
 
-    const quote =
-        "Blending tech expertise with a flair for design, I enjoy bringing new ideas to life in the browser";
-
     return (
-        <div className="App h-[2000px] text-gray-800">
+        <div className="App text-gray-800 overflow-x-clip">
+            <a
+                href="#main"
+                className="sr-only focus:not-sr-only focus:fixed focus:top-14 focus:left-4 focus:z-[60] focus:bg-white focus:px-3 focus:py-2 focus:rounded-md type-label"
+            >
+                Skip to content
+            </a>
+
             <Header />
 
             {theme === "sports" && (
@@ -34,27 +42,17 @@ function App() {
                 />
             )}
 
-            <div className="bg-gradient-to-b from-gray-300 to-white">
-                <DividerShadow />
-                <div className="max-w-screen-sm mx-auto px-4 pt-4 pb-14 font-semibold text-lg text-center">
-                    {quote}
-                </div>
-            </div>
+            <main id="main">
+                <Intro />
 
-            <div className="">
-                <DividerShadow />
-                <Experience />
-            </div>
+                {/* Alternate white and light neutral, starting white after the gray intro */}
+                {sections.map((SectionComponent, index) => (
+                    <div key={index} className={index % 2 ? "bg-gray-100" : "bg-white"}>
+                        <SectionComponent />
+                    </div>
+                ))}
+            </main>
 
-            <div className="">
-                <DividerShadow />
-                <Work />
-            </div>
-
-            <div className="">
-                <DividerShadow />
-                <About />
-            </div>
         </div>
     );
 }
