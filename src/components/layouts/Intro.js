@@ -2,7 +2,7 @@ import React from "react";
 
 // Original wording: "Blending tech expertise with a flair for design, I enjoy bringing new ideas to life in the browser"
 const quote =
-    "Designer by training, developer by curiosity. I like taking an idea from a rough sketch to something you can actually click.";
+    "Designer and developer by day, with a utility belt of side projects by night. Every tool in it started as “I wonder if I could build that.”";
 
 const Intro = () => (
     <div className="bg-gray-100 px-4">
