@@ -14,7 +14,6 @@ export const ShowcaseImage = ({ image, className }) =>
 export const LaptopFrame = ({ image, className }) => (
     <div className={className}>
         <div className="relative -mx-3 rounded-t-2xl bg-gray-900 px-3 pt-3 pb-2 shadow-2xl">
-            <span aria-hidden="true" className="absolute left-1/2 top-3 z-10 h-2.5 w-[14%] -translate-x-1/2 rounded-b-md bg-gray-900 sm:h-3" />
             <ShowcaseImage image={image} className="aspect-[16/10] rounded-sm" />
         </div>
         <div aria-hidden="true" className="relative -mx-[8%] h-3 sm:h-4 rounded-b-xl bg-gradient-to-b from-gray-300 to-gray-500">

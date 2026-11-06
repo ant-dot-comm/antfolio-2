@@ -8,11 +8,12 @@ export const links = {
     resume: `${PUBLIC_URL}/Antoni-Commodore-resume.pdf`,
 };
 
+// `label` is the Teal title, matching each section's heading. Other themes swap it in the header.
 export const navItems = [
-    { label: "Work", href: "#work" },
-    { label: "What I Do", href: "#what-i-do" },
-    { label: "Experience", href: "#experience" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { id: "work", label: "Selected Work", href: "#work" },
+    { id: "what-i-do", label: "What I Do", href: "#what-i-do" },
+    { id: "experience", label: "Experience", href: "#experience" },
+    { id: "about", label: "How I Got Here", href: "#about" },
+    { id: "contact", label: "Say Hello", href: "#contact" },
     { label: "Resume", href: links.resume, external: true },
 ];

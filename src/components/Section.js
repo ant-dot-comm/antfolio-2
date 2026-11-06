@@ -28,7 +28,7 @@ const Section = ({ id, title, dark, width = "narrow", className, children }) => 
                     className={classNames(
                         "type-h2 mx-auto mb-12 md:mb-16 lg:mb-20",
                         sectionWidths.narrow,
-                        dark ? "text-white" : "text-theme-primary"
+                        dark ? "text-white" : "text-theme-heading"
                     )}
                 >
                     {heading}

@@ -22,10 +22,10 @@ function App() {
     const { theme } = useContext(SiteContext);
 
     return (
-        <div className="App text-gray-800 overflow-x-clip">
+        <div className="App text-theme-ink overflow-x-clip">
             <a
                 href="#main"
-                className="sr-only focus:not-sr-only focus:fixed focus:top-14 focus:left-4 focus:z-[60] focus:bg-white focus:px-3 focus:py-2 focus:rounded-md type-label"
+                className="sr-only focus:not-sr-only focus:fixed focus:top-14 focus:left-4 focus:z-[60] focus:bg-theme-surface focus:text-theme-ink focus:px-3 focus:py-2 focus:rounded-md type-label"
             >
                 Skip to content
             </a>
@@ -47,7 +47,7 @@ function App() {
 
                 {/* Alternate white and light neutral, starting white after the gray intro */}
                 {sections.map((SectionComponent, index) => (
-                    <div key={index} className={index % 2 ? "bg-gray-100" : "bg-white"}>
+                    <div key={index} className={index % 2 ? "bg-theme-surface-muted" : "bg-theme-surface"}>
                         <SectionComponent />
                     </div>
                 ))}

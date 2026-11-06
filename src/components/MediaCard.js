@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export function MediaCard({ className, children, image, imageAlt = "", imageClassName, icon, title, url, ctaLabel }) {
     const mediaCardClasses = classNames(
         className,
-        "relative flex flex-col rounded-lg overflow-hidden bg-white",
-        url && "transition-transform duration-300 motion-safe:sm:hover:scale-105 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-theme-primary-dark has-[:focus-visible]:ring-offset-2"
+        "relative flex flex-col rounded-lg overflow-hidden bg-theme-surface-raised",
+        url && "transition-transform duration-300 motion-safe:sm:hover:scale-105 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-theme-accent has-[:focus-visible]:ring-offset-2 has-[:focus-visible]:ring-offset-theme-surface"
     );
 
     return (
@@ -26,18 +26,18 @@ export function MediaCard({ className, children, image, imageAlt = "", imageClas
             )}
 
             {/* Content */}
-            <div className="p-4 flex flex-col items-start bg-gradient-to-b from-gray-200 to-white grow">
+            <div className="p-4 flex flex-col items-start bg-gradient-to-b from-theme-chip-from to-theme-chip-to grow">
                 {icon && <img src={icon} alt="" className="w-8 h-8 mb-3" />}
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                <h3 className="text-lg font-semibold text-theme-ink mb-2">
                     {title}
                 </h3>
-                <div className="text-sm text-gray-600 grow">{children}</div>
+                <div className="text-sm text-theme-ink-muted grow">{children}</div>
                 {url && (
                     <a
                         href={url}
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-theme-primary-dark after:absolute after:inset-0 focus-visible:shadow-none"
+                        className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-theme-accent after:absolute after:inset-0 focus-visible:shadow-none"
                     >
                         {ctaLabel}
                         <FontAwesomeIcon

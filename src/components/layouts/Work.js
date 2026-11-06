@@ -113,7 +113,7 @@ const projects = [
 const Work = () => (
     <Section id="work" title="Selected Work" width="wide">
         {/* Large space between projects, split around a divider */}
-        <div className="divide-y divide-gray-200">
+        <div className="divide-y divide-theme-line">
             {projects.map((project) => (
                 <div key={project.id} className="py-16 md:py-24 lg:py-[7.5rem] first:pt-0 last:pb-0">
                     <ProjectShowcase project={project} />

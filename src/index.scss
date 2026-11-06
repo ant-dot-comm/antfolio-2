@@ -5,7 +5,8 @@
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
-  background-color: #fff;
+  background-color: var(--theme-surface);
+  color: var(--theme-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,7 +16,7 @@ code {
     monospace;
 }
 
-// Type scale (see docs/typography.md). Colors here are the light-background defaults;
+// Type scale (see docs/typography.md). Colors come from the theme ink tokens;
 // a text color utility (e.g. text-white) on the same element overrides them.
 @layer components {
   .type-h2 {
@@ -29,31 +30,31 @@ code {
     line-height: 1.2;
     font-weight: 400;
     letter-spacing: -0.01em;
-    color: theme("colors.gray.800");
+    color: var(--theme-ink);
   }
   .type-h4 {
     font-size: 1.25rem;
     line-height: 1.4;
     font-weight: 600;
-    color: theme("colors.gray.800");
+    color: var(--theme-ink);
   }
   .type-lead {
     font-size: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
     line-height: 1.5;
     font-weight: 500;
-    color: theme("colors.gray.800");
+    color: var(--theme-ink);
   }
   .type-body {
     font-size: 1rem;
     line-height: 1.625;
     font-weight: 400;
-    color: theme("colors.gray.700");
+    color: var(--theme-ink-body);
   }
   .type-small {
     font-size: 0.875rem;
     line-height: 1.5;
     font-weight: 400;
-    color: theme("colors.gray.600");
+    color: var(--theme-ink-muted);
   }
   .type-label {
     font-size: 0.8125rem;
@@ -82,5 +83,5 @@ section[id] {
 // Two-tone ring so focus shows on light and theme-colored backgrounds
 :focus-visible {
   outline: 2px solid transparent;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--theme-primary-dark);
+  box-shadow: 0 0 0 2px var(--theme-focus-offset), 0 0 0 4px var(--theme-focus-ring);
 }

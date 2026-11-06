@@ -39,7 +39,7 @@ const ShowcaseDetails = ({ project, narrow }) => {
                         <li
                             key={tool.label}
                             title={tool.label}
-                            className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-b from-gray-200 to-white"
+                            className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-b from-theme-chip-from to-theme-chip-to"
                         >
                             <ToolIcon {...tool} className="h-7 w-7" />
                             <span className="sr-only">{tool.label}</span>

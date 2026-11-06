@@ -53,26 +53,26 @@ const route = [
 const Route = () => (
     <Section id="experience" title="Experience">
         <div>
-            <ol className="border-l-2 border-theme-primary ml-2">
+            <ol className="border-l-2 border-theme-heading ml-2">
                 {route.map((stop) => (
                     <li key={stop.company} className="relative pl-8 pb-10 last:pb-0">
                         <span
                             aria-hidden="true"
-                            className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-theme-primary-dark ring-4 ring-white"
+                            className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-theme-accent ring-4 ring-theme-surface"
                         />
-                        <p className="type-label text-theme-primary-dark">{stop.years}</p>
+                        <p className="type-label text-theme-accent">{stop.years}</p>
                         <h3 className="type-h4">{stop.company}</h3>
-                        <p className="type-body font-medium text-gray-800">{stop.title}</p>
+                        <p className="type-body font-medium text-theme-ink">{stop.title}</p>
                         <p className="type-body mt-2">{stop.description}</p>
                     </li>
                 ))}
             </ol>
 
-            <div className="mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-6 border-t border-gray-200">
+            <div className="mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-6 border-t border-theme-line">
                 {/* Stacked like the timeline entries: label, degree, school */}
                 <div>
-                    <p className="type-label text-theme-primary-dark">Education</p>
-                    <p className="type-body font-medium text-gray-800">BFA Graphic Design</p>
+                    <p className="type-label text-theme-accent">Education</p>
+                    <p className="type-body font-medium text-theme-ink">BFA Graphic Design</p>
                     <p className="type-small">St. Cloud State University</p>
                 </div>
                 <ButtonLink href={links.resume} download className="self-start sm:self-auto">

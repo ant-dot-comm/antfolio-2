@@ -3,11 +3,11 @@ import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const variants = {
-    primary: "bg-theme-primary-dark text-white border-theme-primary-dark",
-    secondary: "bg-white text-theme-primary-dark border-theme-primary-dark",
-    // For dark theme-color backgrounds
-    light: "bg-white text-theme-primary-dark border-white",
-    lightOutline: "bg-transparent text-white border-white",
+    primary: "bg-theme-button-primary text-theme-button-primary-ink border-theme-button-primary-border",
+    secondary: "bg-theme-button-secondary text-theme-button-secondary-ink border-theme-button-secondary-border",
+    // For brand-color bands (the contact section), not the content canvas
+    light: "bg-theme-button-light text-theme-button-light-ink border-theme-button-light-border",
+    lightOutline: "bg-transparent text-theme-button-light-outline border-theme-button-light-outline-border",
 };
 
 const ButtonLink = ({ href, variant = "primary", external, download, className, children }) => (

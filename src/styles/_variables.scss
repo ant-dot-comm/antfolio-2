@@ -19,6 +19,33 @@ $color-batman-font-base: #ffffff;
 $color-batman-font-secondary: #459400;
 $color-batman-font-tertiary: #b45700;
 
+// Gotham content canvas: warm near-black, light type, gold actions.
+// Brand colors above stay for the header and the contact band.
+$color-batman-surface: #0e0d0b;
+$color-batman-surface-muted: #171512;
+$color-batman-surface-raised: #221f1b;
+$color-batman-ink: #f6f3ec;
+$color-batman-ink-body: #d9d3c7;
+$color-batman-ink-muted: #a89f91;
+$color-batman-line: rgba(255, 244, 220, 0.14);
+$color-batman-heading: #f4b821;
+$color-batman-accent: #ffd72e;
+$color-batman-focus-offset: #0e0d0b;
+$color-batman-focus-ring: #f4b821;
+$color-batman-chip-from: #322e28;
+$color-batman-chip-to: #221f1b;
+$color-batman-button-primary-bg: #f4b821;
+$color-batman-button-primary-ink: #0e0d0b;
+$color-batman-button-primary-border: #f4b821;
+$color-batman-button-secondary-bg: transparent;
+$color-batman-button-secondary-ink: #f6f3ec;
+$color-batman-button-secondary-border: #f4b821;
+$color-batman-button-light-bg: #ffffff;
+$color-batman-button-light-ink: $color-batman-primary-dark;
+$color-batman-button-light-border: #ffffff;
+$color-batman-button-light-outline-ink: #ffffff;
+$color-batman-button-light-outline-border: #ffffff;
+
 /* developer */
 $color-developer-primary-light: #12a29b; // was #19b1a9, darkened for 3:1 with white
 $color-developer-primary-medium: #009a95;
@@ -37,6 +64,21 @@ $color-developer-font-base: #111111;
 $color-developer-font-secondary: #009a95;
 $color-developer-font-tertiary: #4f2e80;
 
+$color-developer-focus-ring: $color-developer-primary-dark;
+$color-developer-heading: $color-developer-primary-medium;
+$color-developer-accent: $color-developer-primary-dark;
+$color-developer-button-primary-bg: $color-developer-primary-dark;
+$color-developer-button-primary-ink: #ffffff;
+$color-developer-button-primary-border: $color-developer-primary-dark;
+$color-developer-button-secondary-bg: #ffffff;
+$color-developer-button-secondary-ink: $color-developer-primary-dark;
+$color-developer-button-secondary-border: $color-developer-primary-dark;
+$color-developer-button-light-bg: #ffffff;
+$color-developer-button-light-ink: $color-developer-primary-dark;
+$color-developer-button-light-border: #ffffff;
+$color-developer-button-light-outline-ink: #ffffff;
+$color-developer-button-light-outline-border: #ffffff;
+
 /* sports */
 $color-sports-primary-light: #6a4c94;
 $color-sports-primary-medium: #4f2e80;
@@ -54,3 +96,32 @@ $color-sports-secondary-dark: #356d00;
 $color-sports-font-base: #111111;
 $color-sports-font-secondary: #1d4774;
 $color-sports-font-tertiary: #459400;
+
+// Den still uses the shared light canvas. Swap these when that theme gets its own surfaces.
+$color-sports-focus-ring: $color-sports-primary-dark;
+$color-sports-heading: $color-sports-primary-medium;
+$color-sports-accent: $color-sports-primary-dark;
+$color-sports-button-primary-bg: $color-sports-primary-dark;
+$color-sports-button-primary-ink: #ffffff;
+$color-sports-button-primary-border: $color-sports-primary-dark;
+$color-sports-button-secondary-bg: #ffffff;
+$color-sports-button-secondary-ink: $color-sports-primary-dark;
+$color-sports-button-secondary-border: $color-sports-primary-dark;
+$color-sports-button-light-bg: #ffffff;
+$color-sports-button-light-ink: $color-sports-primary-dark;
+$color-sports-button-light-border: #ffffff;
+$color-sports-button-light-outline-ink: #ffffff;
+$color-sports-button-light-outline-border: #ffffff;
+
+// Shared light content canvas (Teal, and Den until it gets its own).
+// gray-100 / 200 / 600 / 700 / 800, so the current pages don't shift.
+$color-canvas-surface: #ffffff;
+$color-canvas-surface-muted: #f3f4f6;
+$color-canvas-surface-raised: #ffffff;
+$color-canvas-ink: #1f2937;
+$color-canvas-ink-body: #374151;
+$color-canvas-ink-muted: #4b5563;
+$color-canvas-line: #e5e7eb;
+$color-canvas-focus-offset: #ffffff;
+$color-canvas-chip-from: #e5e7eb;
+$color-canvas-chip-to: #ffffff;

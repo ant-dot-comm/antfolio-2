@@ -13,6 +13,7 @@ import Modal from "../Modal";
 import { ReactComponent as FieldMarks } from "../Svgs/field-marks.svg";
 import { ReactComponent as BatLogos } from "../Svgs/BatLogos.svg";
 import { links, navItems } from "../../data/links";
+import { sectionTitles } from "../../data/themeCopy";
 
 const socialLinks = [
     { label: "LinkedIn", href: links.linkedin, iconName: "linkedin-in" },
@@ -89,19 +90,19 @@ const Header = () => {
                         className={classNames(
                             "lg:flex lg:gap-2",
                             menuOpen
-                                ? "flex flex-col absolute right-0 top-10 min-w-[10rem] p-2 rounded-lg bg-white shadow-lg lg:static lg:flex-row lg:min-w-0 lg:p-0 lg:bg-transparent lg:shadow-none"
+                                ? "flex flex-col absolute right-0 top-10 min-w-[10rem] p-2 rounded-lg bg-theme-surface-raised text-theme-ink shadow-lg ring-1 ring-theme-line lg:static lg:flex-row lg:min-w-0 lg:p-0 lg:bg-transparent lg:text-inherit lg:shadow-none lg:ring-0"
                                 : "hidden"
                         )}
                     >
                         {navItems.map((item) => (
-                            <li key={item.label}>
+                            <li key={item.href}>
                                 <a
                                     href={item.href}
                                     onClick={() => setMenuOpen(false)}
-                                    className="type-label flex items-center gap-1 px-3 py-2 rounded-md text-gray-800 hover:bg-gray-100 lg:h-[26px] lg:px-2 lg:py-0 lg:bg-theme-primary-dark lg:text-white lg:hover:bg-theme-primary-dark lg:hover:shadow-md"
+                                    className="type-label flex items-center gap-1 whitespace-nowrap px-3 py-2 rounded-md text-theme-ink hover:bg-theme-surface-muted lg:h-[26px] lg:px-2 lg:py-0 lg:bg-theme-primary-dark lg:text-white lg:hover:bg-theme-primary-dark lg:hover:shadow-md"
                                     {...(item.external && { target: "_blank", rel: "noreferrer" })}
                                 >
-                                    {item.label}
+                                    {(item.id && sectionTitles[theme]?.[item.id]) || item.label}
                                     {item.external && (
                                         <>
                                             <FontAwesomeIcon

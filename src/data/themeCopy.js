@@ -12,7 +12,7 @@ export const taglines = {
 };
 
 // Section titles by section id. Teal (developer) uses each section's own `title`, so it isn't listed.
-// Nav labels stay plain in every theme.
+// The header nav uses these same titles.
 export const sectionTitles = {
     batman: {
         work: "The Case Files",
@@ -27,6 +27,55 @@ export const sectionTitles = {
         experience: "Season by Season",
         about: "Off the Field",
         contact: "Get in the Game",
+    },
+};
+
+// "What I Do" items, keyed by discipline id. Teal keeps the copy in Toolkit.js.
+// title, statement, and detail replace that item's heading and description.
+export const toolkitItems = {
+    batman: {
+        design: {
+            title: "Blueprints",
+            statement: "The plan has to make sense before the cape comes out.",
+            detail: "UI/UX, design systems, visual direction, prototyping, accessibility.",
+        },
+        engineering: {
+            title: "Armor",
+            statement: "Frontend built strong, and flexible enough to grow with the team.",
+            detail: "React, TypeScript, component architecture, testing, animation, performance.",
+        },
+        exploration: {
+            title: "Gadgets",
+            statement: "The side of the belt where the experiments live.",
+            detail: "Three.js, Blender, D3, 3D scenes and creative coding.",
+        },
+        direction: {
+            title: "The Batcomputer",
+            statement: "It runs the searches. I still decide what leaves the cave.",
+            detail: "Generative tools help me move faster, with guidance docs, focused tasks, and a real review before anything ships.",
+        },
+    },
+    sports: {
+        design: {
+            title: "The Scheme",
+            statement: "The route has to read clearly before it looks like a highlight.",
+            detail: "UI/UX, design systems, visual direction, prototyping, accessibility.",
+        },
+        engineering: {
+            title: "The Reps",
+            statement: "Frontend that holds its assignment when the roster grows.",
+            detail: "React, TypeScript, component architecture, testing, animation, performance.",
+        },
+        exploration: {
+            title: "Trick Plays",
+            statement: "Where the experiments get drawn up.",
+            detail: "Three.js, Blender, D3, 3D scenes and creative coding.",
+        },
+        direction: {
+            title: "Film Study",
+            statement: "Generative tools help me watch more film. I still make the call.",
+            detail: "I use them to explore ideas and move faster, with guidance docs, focused tasks, and a real review before anything gets called.",
+        },
     },
 };
 

@@ -1,9 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 
+import SiteContext from "../../SiteContext";
 import Section from "../Section";
 import ToolIcon from "../ToolIcon";
 
 import { toolLogos } from "../../data/toolLogos";
+import { toolkitItems } from "../../data/themeCopy";
 
 const disciplines = [
     {
@@ -81,7 +83,7 @@ const AiNote = () => {
                 aria-expanded={open}
                 aria-controls="ai-note"
                 onClick={show}
-                className="font-semibold text-theme-primary-dark underline decoration-dotted underline-offset-2"
+                className="font-semibold text-theme-accent underline decoration-dotted underline-offset-2"
             >
                 How I work with agents
             </button>
@@ -106,47 +108,55 @@ const AiNote = () => {
     );
 };
 
-const Toolkit = () => (
-    <Section id="what-i-do" title="What I Do">
-        <ul className="flex flex-col">
-            {disciplines.map((discipline) => (
-                <li
-                    key={discipline.id}
-                    className="flex flex-col gap-2 py-6 border-t border-gray-200 first:border-t-0 first:pt-0 last:pb-0"
-                >
-                    <h3 className="type-h4">{discipline.title}</h3>
-                    <div className="relative">
-                        <p className="type-body font-medium text-gray-800">{discipline.statement}</p>
-                        <div className="type-small mt-1">
-                            {discipline.detail}
-                            {discipline.aiNote && (
-                                <>
-                                    {" "}
-                                    <AiNote />
-                                </>
-                            )}
-                        </div>
-                    </div>
-                    {discipline.tools.length > 0 && (
-                        <ul
-                            aria-label={`${discipline.title} tools`}
-                            className="mt-2 flex flex-wrap gap-2"
+const Toolkit = () => {
+    const { theme } = useContext(SiteContext);
+
+    return (
+        <Section id="what-i-do" title="What I Do">
+            <ul className="flex flex-col">
+                {disciplines.map((discipline) => {
+                    const copy = { ...discipline, ...toolkitItems[theme]?.[discipline.id] };
+
+                    return (
+                        <li
+                            key={discipline.id}
+                            className="flex flex-col gap-2 py-6 border-t border-theme-line first:border-t-0 first:pt-0 last:pb-0"
                         >
-                            {discipline.tools.map((tool) => (
-                                <li
-                                    key={tool.label}
-                                    className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-b from-gray-200 to-white px-3 py-1 type-label text-gray-800"
+                            <h3 className="type-h4">{copy.title}</h3>
+                            <div className="relative">
+                                <p className="type-body font-medium text-theme-ink">{copy.statement}</p>
+                                <div className="type-small mt-1">
+                                    {copy.detail}
+                                    {discipline.aiNote && (
+                                        <>
+                                            {" "}
+                                            <AiNote />
+                                        </>
+                                    )}
+                                </div>
+                            </div>
+                            {discipline.tools.length > 0 && (
+                                <ul
+                                    aria-label={`${discipline.title} tools`}
+                                    className="mt-2 flex flex-wrap gap-2"
                                 >
-                                    <ToolIcon {...tool} className="w-5 h-5" />
-                                    {tool.label}
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                </li>
-            ))}
-        </ul>
-    </Section>
-);
+                                    {discipline.tools.map((tool) => (
+                                        <li
+                                            key={tool.label}
+                                            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-b from-theme-chip-from to-theme-chip-to px-3 py-1 type-label text-theme-ink"
+                                        >
+                                            <ToolIcon {...tool} className="w-5 h-5" />
+                                            {tool.label}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </li>
+                    );
+                })}
+            </ul>
+        </Section>
+    );
+};
 
 export default Toolkit;

@@ -16,6 +16,33 @@ $--theme-font-color-base: --theme-font-color-base;
 $--theme-font-color-secondary: --theme-font-color-secondary;
 $--theme-font-color-tertiary: --theme-font-color-tertiary;
 
+// Content canvas. Brand colors above stay on the header and contact band.
+// These are what text, sections, chips, and buttons read so a theme can flip the page.
+$--theme-surface: --theme-surface;
+$--theme-surface-muted: --theme-surface-muted;
+$--theme-surface-raised: --theme-surface-raised;
+$--theme-ink: --theme-ink;
+$--theme-ink-body: --theme-ink-body;
+$--theme-ink-muted: --theme-ink-muted;
+$--theme-line: --theme-line;
+$--theme-heading: --theme-heading;
+$--theme-accent: --theme-accent;
+$--theme-focus-offset: --theme-focus-offset;
+$--theme-focus-ring: --theme-focus-ring;
+$--theme-chip-from: --theme-chip-from;
+$--theme-chip-to: --theme-chip-to;
+$--theme-button-primary-bg: --theme-button-primary-bg;
+$--theme-button-primary-ink: --theme-button-primary-ink;
+$--theme-button-primary-border: --theme-button-primary-border;
+$--theme-button-secondary-bg: --theme-button-secondary-bg;
+$--theme-button-secondary-ink: --theme-button-secondary-ink;
+$--theme-button-secondary-border: --theme-button-secondary-border;
+$--theme-button-light-bg: --theme-button-light-bg;
+$--theme-button-light-ink: --theme-button-light-ink;
+$--theme-button-light-border: --theme-button-light-border;
+$--theme-button-light-outline-ink: --theme-button-light-outline-ink;
+$--theme-button-light-outline-border: --theme-button-light-outline-border;
+
 
 $theme-map-developer: (
     $--theme-primary: $color-developer-primary-medium,
@@ -37,6 +64,31 @@ $theme-map-developer: (
     $--theme-font-color-base: $color-developer-font-base,
     $--theme-font-color-secondary: $color-developer-font-secondary,
     $--theme-font-color-tertiary: $color-developer-font-tertiary,
+
+    $--theme-surface: $color-canvas-surface,
+    $--theme-surface-muted: $color-canvas-surface-muted,
+    $--theme-surface-raised: $color-canvas-surface-raised,
+    $--theme-ink: $color-canvas-ink,
+    $--theme-ink-body: $color-canvas-ink-body,
+    $--theme-ink-muted: $color-canvas-ink-muted,
+    $--theme-line: $color-canvas-line,
+    $--theme-heading: $color-developer-heading,
+    $--theme-accent: $color-developer-accent,
+    $--theme-focus-offset: $color-canvas-focus-offset,
+    $--theme-focus-ring: $color-developer-focus-ring,
+    $--theme-chip-from: $color-canvas-chip-from,
+    $--theme-chip-to: $color-canvas-chip-to,
+    $--theme-button-primary-bg: $color-developer-button-primary-bg,
+    $--theme-button-primary-ink: $color-developer-button-primary-ink,
+    $--theme-button-primary-border: $color-developer-button-primary-border,
+    $--theme-button-secondary-bg: $color-developer-button-secondary-bg,
+    $--theme-button-secondary-ink: $color-developer-button-secondary-ink,
+    $--theme-button-secondary-border: $color-developer-button-secondary-border,
+    $--theme-button-light-bg: $color-developer-button-light-bg,
+    $--theme-button-light-ink: $color-developer-button-light-ink,
+    $--theme-button-light-border: $color-developer-button-light-border,
+    $--theme-button-light-outline-ink: $color-developer-button-light-outline-ink,
+    $--theme-button-light-outline-border: $color-developer-button-light-outline-border,
 );
 
 
@@ -60,6 +112,31 @@ $theme-map-batman: (
     $--theme-font-color-base: $color-batman-font-base,
     $--theme-font-color-secondary: $color-batman-font-secondary,
     $--theme-font-color-tertiary: $color-batman-font-tertiary,
+
+    $--theme-surface: $color-batman-surface,
+    $--theme-surface-muted: $color-batman-surface-muted,
+    $--theme-surface-raised: $color-batman-surface-raised,
+    $--theme-ink: $color-batman-ink,
+    $--theme-ink-body: $color-batman-ink-body,
+    $--theme-ink-muted: $color-batman-ink-muted,
+    $--theme-line: $color-batman-line,
+    $--theme-heading: $color-batman-heading,
+    $--theme-accent: $color-batman-accent,
+    $--theme-focus-offset: $color-batman-focus-offset,
+    $--theme-focus-ring: $color-batman-focus-ring,
+    $--theme-chip-from: $color-batman-chip-from,
+    $--theme-chip-to: $color-batman-chip-to,
+    $--theme-button-primary-bg: $color-batman-button-primary-bg,
+    $--theme-button-primary-ink: $color-batman-button-primary-ink,
+    $--theme-button-primary-border: $color-batman-button-primary-border,
+    $--theme-button-secondary-bg: $color-batman-button-secondary-bg,
+    $--theme-button-secondary-ink: $color-batman-button-secondary-ink,
+    $--theme-button-secondary-border: $color-batman-button-secondary-border,
+    $--theme-button-light-bg: $color-batman-button-light-bg,
+    $--theme-button-light-ink: $color-batman-button-light-ink,
+    $--theme-button-light-border: $color-batman-button-light-border,
+    $--theme-button-light-outline-ink: $color-batman-button-light-outline-ink,
+    $--theme-button-light-outline-border: $color-batman-button-light-outline-border,
 );
 
 $theme-map-sports: (
@@ -82,12 +159,43 @@ $theme-map-sports: (
     $--theme-font-color-base: $color-sports-font-base,
     $--theme-font-color-secondary: $color-sports-font-secondary,
     $--theme-font-color-tertiary: $color-sports-font-tertiary,
+
+    // Same light canvas as Teal until Den gets its own surfaces.
+    $--theme-surface: $color-canvas-surface,
+    $--theme-surface-muted: $color-canvas-surface-muted,
+    $--theme-surface-raised: $color-canvas-surface-raised,
+    $--theme-ink: $color-canvas-ink,
+    $--theme-ink-body: $color-canvas-ink-body,
+    $--theme-ink-muted: $color-canvas-ink-muted,
+    $--theme-line: $color-canvas-line,
+    $--theme-heading: $color-sports-heading,
+    $--theme-accent: $color-sports-accent,
+    $--theme-focus-offset: $color-canvas-focus-offset,
+    $--theme-focus-ring: $color-sports-focus-ring,
+    $--theme-chip-from: $color-canvas-chip-from,
+    $--theme-chip-to: $color-canvas-chip-to,
+    $--theme-button-primary-bg: $color-sports-button-primary-bg,
+    $--theme-button-primary-ink: $color-sports-button-primary-ink,
+    $--theme-button-primary-border: $color-sports-button-primary-border,
+    $--theme-button-secondary-bg: $color-sports-button-secondary-bg,
+    $--theme-button-secondary-ink: $color-sports-button-secondary-ink,
+    $--theme-button-secondary-border: $color-sports-button-secondary-border,
+    $--theme-button-light-bg: $color-sports-button-light-bg,
+    $--theme-button-light-ink: $color-sports-button-light-ink,
+    $--theme-button-light-border: $color-sports-button-light-border,
+    $--theme-button-light-outline-ink: $color-sports-button-light-outline-ink,
+    $--theme-button-light-outline-border: $color-sports-button-light-outline-border,
 );
 
 @mixin spread-map($map: ()) {
     @each $key, $value in $map {
         #{$key}: $value;
     }
+}
+
+// Teal values are the default so the canvas is correct before JS adds a theme class.
+:root {
+    @include spread-map($theme-map-developer);
 }
 
 .batman {

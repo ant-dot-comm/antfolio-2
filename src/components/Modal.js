@@ -20,7 +20,7 @@ const Modal = ({ open, onClose, title, children }) => {
             aria-labelledby={titleId}
             onClose={onClose}
             onClick={(event) => event.target === ref.current && onClose()}
-            className="w-[calc(100%-2rem)] max-w-2xl rounded-xl bg-white p-0 shadow-2xl backdrop:bg-gray-900/70"
+            className="w-[calc(100%-2rem)] max-w-2xl rounded-xl bg-theme-surface-raised p-0 text-theme-ink shadow-2xl backdrop:bg-gray-900/70"
         >
             <div className="p-6 sm:p-8">
                 <div className="mb-4 flex items-start justify-between gap-4">
@@ -30,7 +30,7 @@ const Modal = ({ open, onClose, title, children }) => {
                     <button
                         type="button"
                         onClick={onClose}
-                        className="rounded-md p-1 text-gray-600 hover:text-gray-900"
+                        className="rounded-md p-1 text-theme-ink-muted hover:text-theme-ink"
                     >
                         <FontAwesomeIcon icon={{ prefix: "fas", iconName: "xmark" }} className="w-5 !h-5" />
                         <span className="sr-only">Close</span>
