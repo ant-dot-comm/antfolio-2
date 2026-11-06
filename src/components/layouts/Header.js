@@ -9,6 +9,7 @@ import ThemeSwitcher from "../ThemeSwitcher";
 import CodingAnimated from "../Svgs/CodingAnimated";
 import BatmanAnimated from "../Svgs/BatmanAnimated";
 import HeaderNames from "../HeaderNames";
+import Modal from "../Modal";
 import { ReactComponent as FieldMarks } from "../Svgs/field-marks.svg";
 import { ReactComponent as BatLogos } from "../Svgs/BatLogos.svg";
 import { links, navItems } from "../../data/links";
@@ -24,6 +25,7 @@ const Header = () => {
     const isMobile = useMediaQuery({ maxWidth: 768 });
     const reduceMotion = useReducedMotion();
     const [menuOpen, setMenuOpen] = useState(false);
+    const [twilightOpen, setTwilightOpen] = useState(false);
 
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -152,22 +154,82 @@ const Header = () => {
                         <div role="img" aria-label="Illustrated Gotham City skyline at twilight">
                             <BatmanAnimated />
                         </div>
-                        <a
-                            href="https://dcau.fandom.com/wiki/Twilight_in_Gotham"
-                            target="_blank"
-                            rel="noreferrer"
+                        <button
+                            type="button"
+                            onClick={() => setTwilightOpen(true)}
                             className="bg-theme-primary-dark px-1 rounded-sm absolute -right-12 bottom-2 shadow-md type-label text-white flex items-center gap-1"
                         >
                             Twilight in Gotham
                             <FontAwesomeIcon
-                                icon={{
-                                    prefix: "fas",
-                                    iconName: "arrow-up-right-from-square",
-                                }}
+                                icon={{ prefix: "fas", iconName: "circle-info" }}
                                 className="w-[12px] !h-[12px]"
                             />
-                            <span className="sr-only">(opens in a new tab)</span>
-                        </a>
+                        </button>
+                        <Modal open={twilightOpen} onClose={() => setTwilightOpen(false)} title="Twilight in Gotham">
+                            <img
+                                src={`${process.env.PUBLIC_URL}/images/twilight-in-gotham.webp`}
+                                alt="Twilight in Gotham being unveiled on stage at Gotham City's tricentennial, with the crowd applauding"
+                                width="600"
+                                height="450"
+                                className="w-full h-auto rounded-lg"
+                            />
+                            <div className="type-body mt-4 flex flex-col gap-3">
+                                <p>
+                                    Gotham turned 300, and the city council did what
+                                    city councils do: it commissioned a painting.
+                                    Guiseppe Bianci spent years getting it right. At
+                                    the black-tie unveiling, Mayor Hamilton Hill
+                                    pulled back the curtain, and Bianci stepped up to
+                                    thank everyone for making the struggle worthwhile.
+                                </p>
+                                <p>Then Mr. Freeze rappelled in from the ceiling.</p>
+                                <p>
+                                    He admired the brushwork. He asked if it had taken
+                                    a lifetime. Bianci, sensing where this was going,
+                                    explained he was far too old to paint another one.
+                                    Freeze agreed that was a real pity, then froze it
+                                    solid and shattered it anyway.
+                                </p>
+                                <p>
+                                    Gotham&rsquo;s greatest painting lasted about one
+                                    speech. The Gotham theme&rsquo;s skyline is a
+                                    tribute to it.
+                                </p>
+                            </div>
+                            <div className="mt-6 grid grid-cols-2 gap-4">
+                                <figure>
+                                    <img
+                                        src={`${process.env.PUBLIC_URL}/images/twilight-in-gotham-freeze.webp`}
+                                        alt="Mr. Freeze blasting Twilight in Gotham with his freeze gun as guests scatter"
+                                        className="aspect-[4/3] w-full rounded-lg object-cover"
+                                    />
+                                    <figcaption className="type-small mt-1">Mr. Freeze, art critic</figcaption>
+                                </figure>
+                                <figure>
+                                    <img
+                                        src={`${process.env.PUBLIC_URL}/images/twilight-in-gotham-bianci.jpg`}
+                                        alt="Guiseppe Bianci in a tuxedo, holding shards of his frozen painting"
+                                        className="aspect-[4/3] w-full rounded-lg object-cover"
+                                    />
+                                    <figcaption className="type-small mt-1">Guiseppe Bianci, the artist</figcaption>
+                                </figure>
+                            </div>
+                            <p className="type-small mt-4">
+                                From &ldquo;Cold Comfort,&rdquo; The New Batman Adventures (1997).
+                            </p>
+                            <p className="type-small mt-4">
+                                Source:{" "}
+                                <a
+                                    href="https://dcau.fandom.com/wiki/Twilight_in_Gotham"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="underline"
+                                >
+                                    DC Animated Universe Wiki
+                                    <span className="sr-only"> (opens in a new tab)</span>
+                                </a>
+                            </p>
+                        </Modal>
                     </div>
                 )}
                 {theme === "sports" && (
